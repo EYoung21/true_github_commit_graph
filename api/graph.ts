@@ -61,7 +61,7 @@ async function fetchContributions(username: string, token: string) {
   const reposQuery = `
     query GetRepos($login: String!) {
       user(login: $login) {
-        repositories(first: 20, ownerAffiliations: [OWNER], orderBy: {field: PUSHED_AT, direction: DESC}) {
+        repositories(first: 10, ownerAffiliations: [OWNER], orderBy: {field: PUSHED_AT, direction: DESC}) {
           nodes { name, owner { login }, defaultBranchRef { name } }
         }
       }
@@ -82,14 +82,14 @@ async function fetchContributions(username: string, token: string) {
   const since = yearAgo.toISOString();
   const until = now.toISOString();
 
-  for (const repo of repos.slice(0, 12)) {
+  for (const repo of repos.slice(0, 8)) {
     try {
       const commitsRes = await axios.get(
-        `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?author=${username}&since=${since}&until=${until}&per_page=25`,
+        `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?author=${username}&since=${since}&until=${until}&per_page=15`,
         { headers: { Authorization: `token ${token}` } }
       );
 
-      for (const commit of commitsRes.data.slice(0, 15)) {
+      for (const commit of commitsRes.data.slice(0, 10)) {
         try {
           const detail = await axios.get(
             `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits/${commit.sha}`,
