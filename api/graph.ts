@@ -225,10 +225,10 @@ function createSVG(
   ${monthLabels}
   ${dayLabels}
   ${cells}
-  <text x="720" y="80" fill="${theme.accent}" font-size="22" font-weight="600">${formatNumber(totalLines)}</text>
-  <text x="720" y="100" fill="${theme.text}" font-size="10" opacity="0.7">lines changed</text>
-  <text x="720" y="135" fill="${theme.title}" font-size="18" font-weight="600">${formatNumber(totalCommits)}</text>
-  <text x="720" y="153" fill="${theme.text}" font-size="10" opacity="0.7">commits</text>
+  <text x="760" y="80" fill="${theme.accent}" font-size="20" font-weight="600">${formatNumber(totalLines)}</text>
+  <text x="760" y="96" fill="${theme.text}" font-size="9" opacity="0.7">lines changed</text>
+  <text x="760" y="125" fill="${theme.title}" font-size="16" font-weight="600">${formatNumber(totalCommits)}</text>
+  <text x="760" y="140" fill="${theme.text}" font-size="9" opacity="0.7">commits</text>
   ${legend}
   <text x="710" y="${legendY}" fill="${theme.text}" font-size="9" opacity="0.4">${yearStart} → ${yearEnd}</text>
 </svg>`;
