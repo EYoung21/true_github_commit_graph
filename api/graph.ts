@@ -221,7 +221,7 @@ function createSVG(
   </style>
   <rect x="0" y="0" rx="8" ry="8" width="100%" height="100%" fill="${theme.background}" stroke="${theme.stroke}" stroke-opacity="${theme.strokeOpacity}"/>
   <text x="20" y="28" fill="${theme.title}" font-size="16" font-weight="600">True GitHub Commit Graph</text>
-  <text x="220" y="28" fill="${theme.text}" font-size="12" opacity="0.7">@${username} • Lines of Code</text>
+  <text x="20" y="46" fill="${theme.text}" font-size="11" opacity="0.7">@${username} • Lines of Code (excludes data files)</text>
   ${monthLabels}
   ${dayLabels}
   ${cells}
