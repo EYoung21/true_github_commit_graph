@@ -63,14 +63,14 @@ async function fetchStats(username: string, token: string) {
   const since = yearAgo.toISOString();
   const until = now.toISOString();
 
-  for (const repo of repos.slice(0, 8)) {
+  for (const repo of repos.slice(0, 6)) {
     try {
       const commitsRes = await axios.get(
-        `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?author=${username}&since=${since}&until=${until}&per_page=15`,
+        `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?author=${username}&since=${since}&until=${until}&per_page=12`,
         { headers: { Authorization: `token ${token}` } }
       );
 
-      for (const commit of commitsRes.data.slice(0, 10)) {
+      for (const commit of commitsRes.data.slice(0, 8)) {
         try {
           const detail = await axios.get(
             `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits/${commit.sha}`,
