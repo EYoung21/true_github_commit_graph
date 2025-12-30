@@ -214,12 +214,12 @@ function createSVG(
     <text x="${gridStartX + 100}" y="${legendY}" fill="${theme.text}" font-size="9" opacity="0.6">More</text>
   `;
 
-  // Stats - positioned at top right, ABOVE the graph grid (after subtitle)
+  // Stats - positioned at top right corner, well above the graph
   const stats = `
-    <text x="${width - 20}" y="50" text-anchor="end" fill="${theme.accent}" font-size="18" font-weight="600">${formatNumber(totalLines)}</text>
-    <text x="${width - 20}" y="64" text-anchor="end" fill="${theme.text}" font-size="9" opacity="0.7">lines changed</text>
-    <text x="${width - 20}" y="78" text-anchor="end" fill="${theme.title}" font-size="14" font-weight="600">${formatNumber(totalCommits)}</text>
-    <text x="${width - 20}" y="90" text-anchor="end" fill="${theme.text}" font-size="9" opacity="0.7">commits</text>
+    <text x="${width - 20}" y="32" text-anchor="end" fill="${theme.accent}" font-size="18" font-weight="600">${formatNumber(totalLines)}</text>
+    <text x="${width - 20}" y="44" text-anchor="end" fill="${theme.text}" font-size="9" opacity="0.7">lines changed</text>
+    <text x="${width - 20}" y="56" text-anchor="end" fill="${theme.title}" font-size="14" font-weight="600">${formatNumber(totalCommits)}</text>
+    <text x="${width - 20}" y="66" text-anchor="end" fill="${theme.text}" font-size="9" opacity="0.7">commits</text>
   `;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
