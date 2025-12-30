@@ -1,7 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import axios from 'axios';
-import { JSDOM } from 'jsdom';
-import * as d3 from 'd3';
 
 // ============ THEME ============
 interface Theme {
@@ -16,17 +14,17 @@ interface Theme {
 const themes: Record<string, Theme> = {
   github_dark: { title: '#58a6ff', text: '#c9d1d9', background: '#0d1117', stroke: '#30363d', strokeOpacity: 1, accent: '#58a6ff' },
   github: { title: '#0366d6', text: '#24292e', background: '#ffffff', stroke: '#e1e4e8', strokeOpacity: 1, accent: '#0366d6' },
-  dracula: { title: '#ff79c6', text: '#f8f8f2', background: '#282a36', stroke: '#44475a', strokeOpacity: 1, accent: '#bd93f9' }
+  dracula: { title: '#ff79c6', text: '#f8f8f2', background: '#282a36', stroke: '#44475a', strokeOpacity: 1, accent: '#bd93f9' },
+  tokyo_night: { title: '#7aa2f7', text: '#a9b1d6', background: '#1a1b27', stroke: '#414868', strokeOpacity: 1, accent: '#bb9af7' }
 };
 
 function getTheme(name: string): Theme {
-  return themes[name] || themes.github_dark;
+  return { ...(themes[name] || themes.github_dark) };
 }
 
 // ============ FILTER ============
-const excludeExtensions = ['json', 'csv', 'lock', 'svg', 'png', 'jpg', 'min.js', 'min.css'];
-const excludePaths = ['node_modules/', 'vendor/', 'dist/', 'build/'];
-const maxLinesPerFile = 2000;
+const excludeExtensions = ['json', 'csv', 'lock', 'svg', 'png', 'jpg', 'min.js', 'min.css', 'md', 'txt'];
+const excludePaths = ['node_modules/', 'vendor/', 'dist/', 'build/', 'package-lock'];
 
 function shouldFilterFile(filename: string): boolean {
   const lower = filename.toLowerCase();
@@ -44,7 +42,7 @@ async function fetchStats(username: string, token: string) {
   const reposQuery = `
     query GetRepos($login: String!) {
       user(login: $login) {
-        repositories(first: 25, ownerAffiliations: [OWNER], orderBy: {field: PUSHED_AT, direction: DESC}) {
+        repositories(first: 20, ownerAffiliations: [OWNER], orderBy: {field: PUSHED_AT, direction: DESC}) {
           nodes { name, owner { login }, defaultBranchRef { name } }
         }
       }
@@ -59,19 +57,20 @@ async function fetchStats(username: string, token: string) {
   if (reposRes.data.errors) throw new Error(reposRes.data.errors[0].message);
 
   const repos = reposRes.data.data.user.repositories.nodes.filter((r: any) => r.defaultBranchRef);
-  let totalAdded = 0, totalDeleted = 0, totalCommits = 0, contributingDays = new Set<string>();
+  let totalAdded = 0, totalDeleted = 0, totalCommits = 0;
+  const contributingDays = new Set<string>();
 
   const since = yearAgo.toISOString();
   const until = now.toISOString();
 
-  for (const repo of repos.slice(0, 15)) {
+  for (const repo of repos.slice(0, 12)) {
     try {
       const commitsRes = await axios.get(
-        `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?author=${username}&since=${since}&until=${until}&per_page=30`,
+        `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?author=${username}&since=${since}&until=${until}&per_page=25`,
         { headers: { Authorization: `token ${token}` } }
       );
 
-      for (const commit of commitsRes.data.slice(0, 20)) {
+      for (const commit of commitsRes.data.slice(0, 15)) {
         try {
           const detail = await axios.get(
             `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits/${commit.sha}`,
@@ -84,7 +83,7 @@ async function fetchStats(username: string, token: string) {
           if (detail.data.files) {
             for (const file of detail.data.files) {
               if (shouldFilterFile(file.filename)) continue;
-              if (file.additions > maxLinesPerFile) continue;
+              if (file.additions > 2000) continue;
               added += file.additions || 0;
               deleted += file.deletions || 0;
             }
@@ -110,47 +109,8 @@ function formatNumber(num: number): string {
 }
 
 function createStatsSVG(username: string, stats: any, theme: Theme): string {
-  const width = 400;
-  const height = 195;
-
-  const dom = new JSDOM('<!DOCTYPE html><html><body></body></html>');
-  const body = d3.select(dom.window.document.body);
-
-  const svg = body.append('div').attr('class', 'container')
-    .append('svg')
-    .attr('xmlns', 'http://www.w3.org/2000/svg')
-    .attr('width', width)
-    .attr('height', height)
-    .attr('viewBox', `0 0 ${width} ${height}`);
-
-  svg.append('style').text(`
-    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
-    * { font-family: 'JetBrains Mono', monospace; }
-  `);
-
-  svg.append('rect')
-    .attr('x', 0).attr('y', 0).attr('rx', 8).attr('ry', 8)
-    .attr('width', '100%').attr('height', '100%')
-    .attr('fill', theme.background)
-    .attr('stroke', theme.stroke)
-    .attr('stroke-opacity', theme.strokeOpacity);
-
-  svg.append('text')
-    .attr('x', 20).attr('y', 28)
-    .attr('fill', theme.title)
-    .attr('font-size', '16px')
-    .attr('font-weight', '600')
-    .text(`${username}'s Code Stats`);
-
-  svg.append('text')
-    .attr('x', width - 20).attr('y', 28)
-    .attr('text-anchor', 'end')
-    .attr('fill', theme.text)
-    .attr('font-size', '10px')
-    .attr('opacity', 0.5)
-    .text('Lines of Code Based');
-
-  const g = svg.append('g').attr('transform', 'translate(0, 50)');
+  const width = 400, height = 195;
+  const avgPerCommit = stats.totalCommits > 0 ? Math.round((stats.totalAdded + stats.totalDeleted) / stats.totalCommits) : 0;
 
   const statItems = [
     { label: 'Total Lines Changed', value: formatNumber(stats.totalAdded + stats.totalDeleted), color: theme.accent },
@@ -158,20 +118,31 @@ function createStatsSVG(username: string, stats: any, theme: Theme): string {
     { label: 'Lines Deleted', value: '-' + formatNumber(stats.totalDeleted), color: '#f85149' },
     { label: 'Total Commits', value: formatNumber(stats.totalCommits), color: theme.title },
     { label: 'Contributing Days', value: stats.contributingDays.toString(), color: theme.text },
-    { label: 'Avg Lines/Commit', value: stats.totalCommits > 0 ? formatNumber(Math.round((stats.totalAdded + stats.totalDeleted) / stats.totalCommits)) : '0', color: '#f0883e' }
+    { label: 'Avg Lines/Commit', value: formatNumber(avgPerCommit), color: '#f0883e' }
   ];
 
-  statItems.forEach((item, idx) => {
+  const rows = statItems.map((item, idx) => {
     const col = idx % 2;
     const row = Math.floor(idx / 2);
     const x = col === 0 ? 20 : 210;
-    const y = row * 35;
+    const y = 70 + row * 35;
+    const valueX = col === 0 ? 185 : 375;
+    return `
+      <text x="${x}" y="${y}" fill="${theme.text}" font-size="11" opacity="0.8">${item.label}</text>
+      <text x="${valueX}" y="${y}" text-anchor="end" fill="${item.color}" font-size="13" font-weight="600">${item.value}</text>
+    `;
+  }).join('');
 
-    g.append('text').attr('x', x).attr('y', y + 15).attr('fill', theme.text).attr('font-size', '11px').attr('opacity', 0.8).text(item.label);
-    g.append('text').attr('x', col === 0 ? 185 : 375).attr('y', y + 15).attr('text-anchor', 'end').attr('fill', item.color).attr('font-size', '13px').attr('font-weight', '600').text(item.value);
-  });
-
-  return body.select('.container').html();
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&amp;display=swap');
+    text { font-family: 'JetBrains Mono', monospace; }
+  </style>
+  <rect x="0" y="0" rx="8" ry="8" width="100%" height="100%" fill="${theme.background}" stroke="${theme.stroke}" stroke-opacity="${theme.strokeOpacity}"/>
+  <text x="20" y="28" fill="${theme.title}" font-size="16" font-weight="600">${username}'s Code Stats</text>
+  <text x="${width - 20}" y="28" text-anchor="end" fill="${theme.text}" font-size="10" opacity="0.5">Lines of Code Based</text>
+  ${rows}
+</svg>`;
 }
 
 // ============ HANDLER ============
@@ -179,16 +150,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const { username, theme = 'github_dark', hide_border = 'false' } = req.query;
 
   if (!username || typeof username !== 'string') {
-    return res.status(400).json({ error: 'username required' });
+    return res.status(400).send('Missing username parameter');
   }
 
   if (!process.env.GITHUB_TOKEN) {
-    return res.status(500).json({ error: 'GITHUB_TOKEN not configured' });
+    return res.status(500).send('GITHUB_TOKEN not configured');
   }
 
   try {
     const stats = await fetchStats(username, process.env.GITHUB_TOKEN);
-    const selectedTheme = { ...getTheme(theme as string) };
+    const selectedTheme = getTheme(theme as string);
     if (hide_border === 'true') selectedTheme.strokeOpacity = 0;
 
     const svg = createStatsSVG(username, stats, selectedTheme);
@@ -197,6 +168,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     res.setHeader('Content-Type', 'image/svg+xml');
     return res.status(200).send(svg);
   } catch (error: any) {
-    return res.status(500).json({ error: error.message || 'Failed' });
+    return res.status(500).send(`Error: ${error.message}`);
   }
 }
