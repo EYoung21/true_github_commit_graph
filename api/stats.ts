@@ -113,12 +113,12 @@ function createStatsSVG(username: string, stats: any, theme: Theme): string {
   const avgPerCommit = stats.totalCommits > 0 ? Math.round((stats.totalAdded + stats.totalDeleted) / stats.totalCommits) : 0;
 
   const statItems = [
-    { label: 'Total Lines Changed', value: formatNumber(stats.totalAdded + stats.totalDeleted), color: theme.accent },
+    { label: 'Lines Changed', value: formatNumber(stats.totalAdded + stats.totalDeleted), color: theme.accent },
     { label: 'Lines Added', value: '+' + formatNumber(stats.totalAdded), color: '#3fb950' },
     { label: 'Lines Deleted', value: '-' + formatNumber(stats.totalDeleted), color: '#f85149' },
-    { label: 'Total Commits', value: formatNumber(stats.totalCommits), color: theme.title },
-    { label: 'Contributing Days', value: stats.contributingDays.toString(), color: theme.text },
-    { label: 'Avg Lines/Commit', value: formatNumber(avgPerCommit), color: '#f0883e' }
+    { label: 'Commits', value: formatNumber(stats.totalCommits), color: theme.title },
+    { label: 'Active Days', value: stats.contributingDays.toString(), color: theme.text },
+    { label: 'Avg/Commit', value: formatNumber(avgPerCommit), color: '#f0883e' }
   ];
 
   const rows = statItems.map((item, idx) => {
