@@ -83,16 +83,16 @@ async function fetchContributions(username: string, token: string) {
   const until = now.toISOString();
 
   // Process more repos, but limit commits per repo to stay under timeout
-  for (const repo of repos.slice(0, 20)) {
+  for (const repo of repos.slice(0, 15)) {
     try {
       // Fetch more commits per repo
       const commitsRes = await axios.get(
-        `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?author=${username}&since=${since}&until=${until}&per_page=30`,
+        `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?author=${username}&since=${since}&until=${until}&per_page=25`,
         { headers: { Authorization: `token ${token}` } }
       );
 
-      // Process all commits from this page
-      for (const commit of commitsRes.data) {
+      // Process commits (limit to 20 per repo to stay fast)
+      for (const commit of commitsRes.data.slice(0, 20)) {
         try {
           const detail = await axios.get(
             `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits/${commit.sha}`,
