@@ -172,7 +172,6 @@ function createRecentCommitsSVG(
 
   // Group commits by date
   const dailyMap = new Map<string, { lines: number; count: number }>();
-  let maxLines = 100;
   let totalLines = 0, totalCommits = 0;
   let earliestDate: Date | null = null;
 
@@ -185,7 +184,6 @@ function createRecentCommitsSVG(
     day.count++;
     totalLines += commit.lines;
     totalCommits++;
-    if (day.lines > maxLines) maxLines = day.lines;
     
     // Track earliest date
     const commitDate = new Date(commit.date);
@@ -193,6 +191,14 @@ function createRecentCommitsSVG(
       earliestDate = commitDate;
     }
   }
+
+  // Find actual max lines for better color scaling
+  let maxLines = 0;
+  for (const dayData of dailyMap.values()) {
+    if (dayData.lines > maxLines) maxLines = dayData.lines;
+  }
+  // Ensure minimum for good color distribution
+  maxLines = Math.max(maxLines, 50);
 
   // Use earliest commit date as start, or today if no commits
   const now = new Date();

@@ -188,11 +188,13 @@ function createSVG(
   const gridStartX = 45, gridStartY = 65;
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  // Find max for scaling
-  let maxLines = 100;
+  // Find actual max for scaling
+  let maxLines = 0;
   for (const d of dailyMap.values()) {
     if (d.totalLines > maxLines) maxLines = d.totalLines;
   }
+  // Ensure minimum for good color distribution
+  maxLines = Math.max(maxLines, 100);
 
   // Build weeks
   const startDate = new Date(yearStart);
