@@ -214,6 +214,14 @@ function createSVG(
     <text x="${gridStartX + 100}" y="${legendY}" fill="${theme.text}" font-size="9" opacity="0.6">More</text>
   `;
 
+  // Stats - positioned at bottom right, below legend
+  const statsY = height - 10;
+  const stats = `
+    <text x="${width - 20}" y="${statsY - 25}" text-anchor="end" fill="${theme.accent}" font-size="18" font-weight="600">${formatNumber(totalLines)}</text>
+    <text x="${width - 20}" y="${statsY - 10}" text-anchor="end" fill="${theme.text}" font-size="9" opacity="0.7">lines changed</text>
+    <text x="${width - 20}" y="${statsY}" text-anchor="end" fill="${theme.title}" font-size="14" font-weight="600">${formatNumber(totalCommits)} commits</text>
+  `;
+
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&amp;display=swap');
@@ -225,12 +233,9 @@ function createSVG(
   ${monthLabels}
   ${dayLabels}
   ${cells}
-  <text x="760" y="80" fill="${theme.accent}" font-size="20" font-weight="600">${formatNumber(totalLines)}</text>
-  <text x="760" y="96" fill="${theme.text}" font-size="9" opacity="0.7">lines changed</text>
-  <text x="760" y="125" fill="${theme.title}" font-size="16" font-weight="600">${formatNumber(totalCommits)}</text>
-  <text x="760" y="140" fill="${theme.text}" font-size="9" opacity="0.7">commits</text>
   ${legend}
-  <text x="710" y="${legendY}" fill="${theme.text}" font-size="9" opacity="0.4">${yearStart} → ${yearEnd}</text>
+  ${stats}
+  <text x="${width - 140}" y="${legendY}" fill="${theme.text}" font-size="9" opacity="0.4">${yearStart} → ${yearEnd}</text>
 </svg>`;
 }
 
