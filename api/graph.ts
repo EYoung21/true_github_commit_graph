@@ -214,12 +214,12 @@ function createSVG(
     <text x="${gridStartX + 100}" y="${legendY}" fill="${theme.text}" font-size="9" opacity="0.6">More</text>
   `;
 
-  // Stats - positioned at top right, above the graph
+  // Stats - positioned at top right, ABOVE the graph grid (after subtitle)
   const stats = `
-    <text x="${width - 20}" y="80" text-anchor="end" fill="${theme.accent}" font-size="20" font-weight="600">${formatNumber(totalLines)}</text>
-    <text x="${width - 20}" y="96" text-anchor="end" fill="${theme.text}" font-size="9" opacity="0.7">lines changed</text>
-    <text x="${width - 20}" y="120" text-anchor="end" fill="${theme.title}" font-size="16" font-weight="600">${formatNumber(totalCommits)}</text>
-    <text x="${width - 20}" y="135" text-anchor="end" fill="${theme.text}" font-size="9" opacity="0.7">commits</text>
+    <text x="${width - 20}" y="50" text-anchor="end" fill="${theme.accent}" font-size="18" font-weight="600">${formatNumber(totalLines)}</text>
+    <text x="${width - 20}" y="64" text-anchor="end" fill="${theme.text}" font-size="9" opacity="0.7">lines changed</text>
+    <text x="${width - 20}" y="78" text-anchor="end" fill="${theme.title}" font-size="14" font-weight="600">${formatNumber(totalCommits)}</text>
+    <text x="${width - 20}" y="90" text-anchor="end" fill="${theme.text}" font-size="9" opacity="0.7">commits</text>
   `;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
@@ -230,12 +230,12 @@ function createSVG(
   <rect x="0" y="0" rx="8" ry="8" width="100%" height="100%" fill="${theme.background}" stroke="${theme.stroke}" stroke-opacity="${theme.strokeOpacity}"/>
   <text x="20" y="28" fill="${theme.title}" font-size="16" font-weight="600">True GitHub Commit Graph</text>
   <text x="20" y="46" fill="${theme.text}" font-size="11" opacity="0.7">@${username} • Lines of Code (excludes data files)</text>
+  ${stats}
   ${monthLabels}
   ${dayLabels}
   ${cells}
   ${legend}
   <text x="${width - 20}" y="${legendY}" text-anchor="end" fill="${theme.text}" font-size="9" opacity="0.4">${yearStart} → ${yearEnd}</text>
-  ${stats}
 </svg>`;
 }
 
