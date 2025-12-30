@@ -63,14 +63,15 @@ async function fetchStats(username: string, token: string) {
   const since = yearAgo.toISOString();
   const until = now.toISOString();
 
-  for (const repo of repos.slice(0, 15)) {
+  // Process repos in parallel batches
+  const processRepo = async (repo: any) => {
     try {
       const commitsRes = await axios.get(
-        `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?author=${username}&since=${since}&until=${until}&per_page=25`,
+        `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?author=${username}&since=${since}&until=${until}&per_page=30`,
         { headers: { Authorization: `token ${token}` } }
       );
 
-      for (const commit of commitsRes.data.slice(0, 20)) {
+      const processCommit = async (commit: any) => {
         try {
           const detail = await axios.get(
             `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits/${commit.sha}`,
@@ -89,13 +90,40 @@ async function fetchStats(username: string, token: string) {
             }
           }
 
-          if (added + deleted > 0) contributingDays.add(date);
-          totalAdded += added;
-          totalDeleted += deleted;
+          return { date, added, deleted };
+        } catch {
+          return null;
+        }
+      };
+
+      // Process commits in batches of 10
+      const commits = commitsRes.data.slice(0, 30);
+      const batches = [];
+      for (let i = 0; i < commits.length; i += 10) {
+        batches.push(commits.slice(i, i + 10));
+      }
+
+      for (const batch of batches) {
+        const results = await Promise.all(batch.map(processCommit));
+        for (const result of results) {
+          if (!result) continue;
+          if (result.added + result.deleted > 0) contributingDays.add(result.date);
+          totalAdded += result.added;
+          totalDeleted += result.deleted;
           totalCommits++;
-        } catch { }
+        }
       }
     } catch { }
+  };
+
+  // Process repos in batches of 5
+  const repoBatches = [];
+  for (let i = 0; i < Math.min(repos.length, 25); i += 5) {
+    repoBatches.push(repos.slice(i, i + 5));
+  }
+
+  for (const batch of repoBatches) {
+    await Promise.all(batch.map(processRepo));
   }
 
   return { totalAdded, totalDeleted, totalCommits, contributingDays: contributingDays.size };
