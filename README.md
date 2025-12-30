@@ -39,8 +39,21 @@ GitHub's contribution graph counts commits, which doesn't reflect actual work:
 
 #### Step 2: Add to Your README
 
+**Option A: Recent Commits (Recommended - Shows last 50 commits)**
 ```html
-<!-- True GitHub Commit Graph -->
+<!-- True GitHub Commit Graph - Recent Commits -->
+<p align="center">
+  <img src="https://YOUR-VERCEL-APP.vercel.app/api/graph-recent?username=YOUR_USERNAME&theme=github_dark&hide_border=true&limit=50" alt="True Contribution Graph" />
+</p>
+
+<p align="center">
+  <img width="48%" src="https://YOUR-VERCEL-APP.vercel.app/api/stats-recent?username=YOUR_USERNAME&theme=github_dark&hide_border=true&limit=50" alt="Code Stats" />
+</p>
+```
+
+**Option B: Yearly Graph (Full year calendar)**
+```html
+<!-- True GitHub Commit Graph - Yearly -->
 <p align="center">
   <img src="https://YOUR-VERCEL-APP.vercel.app/api/graph?username=YOUR_USERNAME&theme=github_dark&hide_border=true" alt="True Contribution Graph" />
 </p>
@@ -89,12 +102,18 @@ Here's how to integrate it with your existing GitHub profile (matching your styl
 ## 📈 True Contribution Graph
 > **Lines of Code based** - A more accurate picture of contributions
 
+**Recent Commits (Last 50):**
 <p align="center">
-  <img src="https://YOUR-APP.vercel.app/api/graph?username=EYoung21&theme=github_dark&hide_border=true" alt="True Contribution Graph" />
+  <img src="https://YOUR-APP.vercel.app/api/graph-recent?username=EYoung21&theme=github_dark&hide_border=true&limit=50" alt="True Contribution Graph" />
 </p>
 
 <p align="center">
-  <img width="48%" src="https://YOUR-APP.vercel.app/api/stats?username=EYoung21&theme=github_dark&hide_border=true" alt="Code Stats" />
+  <img width="48%" src="https://YOUR-APP.vercel.app/api/stats-recent?username=EYoung21&theme=github_dark&hide_border=true&limit=50" alt="Code Stats" />
+</p>
+
+**Or Yearly Graph:**
+<p align="center">
+  <img src="https://YOUR-APP.vercel.app/api/graph?username=EYoung21&theme=github_dark&hide_border=true" alt="True Contribution Graph" />
 </p>
 ```
 
@@ -119,6 +138,16 @@ Use `?theme=THEME_NAME` in your URL:
 
 ---
 
+## ⚙️ API Endpoints
+
+### Recent Commits (Recommended)
+- `/api/graph-recent` - Shows last X commits in a 90-day calendar view
+- `/api/stats-recent` - Stats for last X commits
+
+### Yearly Graph
+- `/api/graph` - Full year calendar (last 365 days)
+- `/api/stats` - Stats for the full year
+
 ## ⚙️ API Parameters
 
 | Parameter | Description | Default |
@@ -126,11 +155,13 @@ Use `?theme=THEME_NAME` in your URL:
 | `username` | GitHub username (required) | - |
 | `theme` | Color theme | `github_dark` |
 | `hide_border` | Hide card border | `false` |
+| `limit` | Number of commits to fetch (recent endpoints only) | `50` |
 | `max_lines_per_file` | Filter threshold for data dumps | `2000` |
 
-**Example:**
+**Examples:**
 ```
-/api/graph?username=EYoung21&theme=dracula&hide_border=true&max_lines_per_file=1500
+/api/graph-recent?username=EYoung21&theme=github_dark&hide_border=true&limit=50
+/api/graph?username=EYoung21&theme=dracula&hide_border=true
 ```
 
 ---
@@ -189,3 +220,4 @@ MIT
 ---
 
 *Inspired by [github-profile-summary-cards](https://github.com/vn7n24fzkq/github-profile-summary-cards) and [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)*
+
