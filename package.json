@@ -23,8 +23,7 @@
     "axios": "^1.6.2",
     "d3": "^7.8.5",
     "dotenv": "^16.3.1",
-    "jsdom": "^23.0.1",
-    "retry-axios": "^3.0.0"
+    "jsdom": "^23.0.1"
   },
   "devDependencies": {
     "@types/d3": "^7.4.3",
