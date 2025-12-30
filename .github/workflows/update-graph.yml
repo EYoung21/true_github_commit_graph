@@ -29,7 +29,7 @@ jobs:
 
       - name: Generate graphs
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: ${{ github.repository_owner }}
           THEME: github_dark
         run: npm run generate

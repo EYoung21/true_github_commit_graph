@@ -72,8 +72,11 @@ This generates static SVGs and commits them to your repo.
 #### Step 1: Setup
 
 1. Fork/clone this repo
-2. Go to repo Settings → Secrets → Actions
-3. Add secret `GH_PAT` with your GitHub token
+2. Go to repo **Settings → Secrets and variables → Actions**
+3. Click **"New repository secret"**
+4. Name: `GH_PAT`
+5. Value: Your GitHub Personal Access Token ([create one here](https://github.com/settings/tokens) with `repo` scope)
+6. Click **"Add secret"**
 
 #### Step 2: The Action runs automatically!
 
