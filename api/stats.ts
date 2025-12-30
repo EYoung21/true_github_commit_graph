@@ -164,8 +164,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const svg = createStatsSVG(username, stats, selectedTheme);
 
-    res.setHeader('Cache-Control', 's-maxage=21600, stale-while-revalidate');
-    res.setHeader('Content-Type', 'image/svg+xml');
+    res.setHeader('Cache-Control', 'public, max-age=21600, s-maxage=21600, stale-while-revalidate');
+    res.setHeader('Content-Type', 'image/svg+xml; charset=utf-8');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET');
     return res.status(200).send(svg);
   } catch (error: any) {
     return res.status(500).send(`Error: ${error.message}`);

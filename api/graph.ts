@@ -253,8 +253,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     const svg = createSVG(username, data.dailyMap, data.totalLines, data.totalCommits, data.yearStart, data.yearEnd, selectedTheme);
 
-    res.setHeader('Cache-Control', 's-maxage=21600, stale-while-revalidate');
-    res.setHeader('Content-Type', 'image/svg+xml');
+    res.setHeader('Cache-Control', 'public, max-age=21600, s-maxage=21600, stale-while-revalidate');
+    res.setHeader('Content-Type', 'image/svg+xml; charset=utf-8');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET');
     return res.status(200).send(svg);
   } catch (error: any) {
     console.error('Error:', error);
