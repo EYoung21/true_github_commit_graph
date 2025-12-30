@@ -169,12 +169,12 @@ function createRecentCommitsSVG(
   const width = 850, height = 400;
   const cellSize = 11, cellGap = 3;
   const gridStartX = 45, gridStartY = 65;
-  const maxDays = 90; // Show last 90 days
 
   // Group commits by date
   const dailyMap = new Map<string, { lines: number; count: number }>();
   let maxLines = 100;
   let totalLines = 0, totalCommits = 0;
+  let earliestDate: Date | null = null;
 
   for (const commit of commits) {
     if (!dailyMap.has(commit.date)) {
@@ -186,12 +186,17 @@ function createRecentCommitsSVG(
     totalLines += commit.lines;
     totalCommits++;
     if (day.lines > maxLines) maxLines = day.lines;
+    
+    // Track earliest date
+    const commitDate = new Date(commit.date);
+    if (!earliestDate || commitDate < earliestDate) {
+      earliestDate = commitDate;
+    }
   }
 
-  // Build last 90 days
+  // Use earliest commit date as start, or today if no commits
   const now = new Date();
-  const startDate = new Date(now);
-  startDate.setDate(startDate.getDate() - maxDays);
+  const startDate = earliestDate || now;
   const adjustedStart = new Date(startDate);
   adjustedStart.setDate(adjustedStart.getDate() - adjustedStart.getDay());
 
@@ -202,7 +207,11 @@ function createRecentCommitsSVG(
   let weekIdx = 0;
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-  while (currentDate <= now && weekIdx < 13) {
+  // Calculate number of weeks needed (max 53 weeks for full year)
+  const daysDiff = Math.ceil((now.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));
+  const maxWeeks = Math.min(Math.ceil(daysDiff / 7) + 1, 53);
+  
+  while (currentDate <= now && weekIdx < maxWeeks) {
     for (let dayIdx = 0; dayIdx < 7; dayIdx++) {
       if (currentDate >= startDate && currentDate <= now) {
         const dateStr = currentDate.toISOString().split('T')[0];
@@ -255,7 +264,7 @@ function createRecentCommitsSVG(
   ${dayLabels}
   ${cells}
   ${legend}
-  <text x="${width - 20}" y="${legendY}" text-anchor="end" fill="${theme.text}" font-size="9" opacity="0.4">Last 90 days</text>
+  <text x="${width - 20}" y="${legendY}" text-anchor="end" fill="${theme.text}" font-size="9" opacity="0.4">${startDate.toISOString().split('T')[0]} → ${now.toISOString().split('T')[0]}</text>
 </svg>`;
 }
 
