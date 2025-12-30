@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="220" viewBox="0 0 850 220"><style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+      * {
+        font-family: 'JetBrains Mono', 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Mono', monospace;
+      }
+      .title {
+        font-weight: 600;
+        letter-spacing: -0.5px;
+      }
+      .subtitle {
+        font-weight: 400;
+        opacity: 0.8;
+      }
+      .stat-value {
+        font-weight: 600;
+      }
+      .stat-label {
+        font-weight: 400;
+        opacity: 0.7;
+      }
+      .day-label, .month-label {
+        font-size: 9px;
+        fill: #c9d1d9;
+        opacity: 0.6;
+      }
+    </style><rect x="0" y="0" rx="8" ry="8" width="100%" height="100%" fill="#0d1117" stroke="#30363d" stroke-width="1" stroke-opacity="1"></rect><text class="title" x="20" y="28" fill="#58a6ff" font-size="16px">True GitHub Commit Graph</text><g transform="translate(0, 40)"><text class="subtitle" x="210" y="-12" fill="#c9d1d9" font-size="12px" opacity="0.7">@EYoung21 • Lines of Code</text><text class="month-label" x="45" y="17">Jan</text><text class="month-label" x="108" y="17">Feb</text><text class="month-label" x="171" y="17">Mar</text><text class="month-label" x="234" y="17">Apr</text><text class="month-label" x="297" y="17">May</text><text class="month-label" x="360" y="17">Jun</text><text class="month-label" x="423" y="17">Jul</text><text class="month-label" x="486" y="17">Aug</text><text class="month-label" x="549" y="17">Sep</text><text class="month-label" x="612" y="17">Oct</text><text class="month-label" x="675" y="17">Nov</text><text class="month-label" x="738" y="17">Dec</text><text class="day-label" x="20" y="44">Mon</text><text class="day-label" x="20" y="72">Wed</text><text class="day-label" x="20" y="100">Fri</text><!-- Sample cells showing contribution pattern --><rect x="45" y="25" width="11" height="11" rx="2" ry="2" fill="#161b22"></rect><rect x="45" y="39" width="11" height="11" rx="2" ry="2" fill="#0e4429"></rect><rect x="45" y="53" width="11" height="11" rx="2" ry="2" fill="#006d32"></rect><rect x="45" y="67" width="11" height="11" rx="2" ry="2" fill="#26a641"></rect><rect x="45" y="81" width="11" height="11" rx="2" ry="2" fill="#39d353"></rect><rect x="45" y="95" width="11" height="11" rx="2" ry="2" fill="#161b22"></rect><rect x="45" y="109" width="11" height="11" rx="2" ry="2" fill="#0e4429"></rect><rect x="59" y="25" width="11" height="11" rx="2" ry="2" fill="#26a641"></rect><rect x="59" y="39" width="11" height="11" rx="2" ry="2" fill="#161b22"></rect><rect x="59" y="53" width="11" height="11" rx="2" ry="2" fill="#39d353"></rect><rect x="59" y="67" width="11" height="11" rx="2" ry="2" fill="#006d32"></rect><rect x="59" y="81" width="11" height="11" rx="2" ry="2" fill="#161b22"></rect><rect x="59" y="95" width="11" height="11" rx="2" ry="2" fill="#0e4429"></rect><rect x="59" y="109" width="11" height="11" rx="2" ry="2" fill="#26a641"></rect><!-- More weeks would continue here... --><text class="stat-value" x="720" y="75" fill="#58a6ff" font-size="20px">125.4K</text><text class="stat-label" x="720" y="93" fill="#c9d1d9" font-size="10px">lines changed</text><text class="stat-value" x="720" y="125" fill="#58a6ff" font-size="16px">847</text><text class="stat-label" x="720" y="141" fill="#c9d1d9" font-size="10px">commits</text><text x="45" y="175" fill="#c9d1d9" font-size="9px" opacity="0.6">Less</text><rect x="75" y="165" width="11" height="11" rx="2" fill="#161b22"></rect><rect x="88" y="165" width="11" height="11" rx="2" fill="#0e4429"></rect><rect x="101" y="165" width="11" height="11" rx="2" fill="#006d32"></rect><rect x="114" y="165" width="11" height="11" rx="2" fill="#26a641"></rect><rect x="127" y="165" width="11" height="11" rx="2" fill="#39d353"></rect><text x="145" y="175" fill="#c9d1d9" font-size="9px" opacity="0.6">More</text><text x="710" y="175" fill="#c9d1d9" font-size="9px" opacity="0.5">2024-12-29 → 2025-12-29</text></g></svg>
+

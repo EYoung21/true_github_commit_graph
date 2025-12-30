@@ -1,7 +1,6 @@
 node_modules/
 dist/
 .env
-output/
 *.log
 .DS_Store
 github-profile-summary-cards/
