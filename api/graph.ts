@@ -168,10 +168,11 @@ function formatNumber(num: number): string {
 function getLevel(lines: number, max: number): number {
   if (lines === 0) return 0;
   const pct = lines / max;
-  if (pct <= 0.25) return 1;
-  if (pct <= 0.50) return 2;
-  if (pct <= 0.75) return 3;
-  return 4;
+  // Use more granular thresholds for better visual distinction
+  if (pct <= 0.15) return 1;  // Very light
+  if (pct <= 0.35) return 2;  // Light
+  if (pct <= 0.60) return 3;  // Medium
+  return 4;  // Bright
 }
 
 function createSVG(
