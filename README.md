@@ -2,6 +2,7 @@
 
 > **Measure your GitHub contributions by Lines of Code, not just commit count.**
 
+
 <p align="center">
   <img src="./output/contribution-graph.svg" alt="True GitHub Commit Graph" />
 </p>
