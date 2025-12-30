@@ -1,0 +1,44 @@
+name: Update True Commit Graph
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allow manual trigger
+  push:
+    branches: [main]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate graphs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+          THEME: github_dark
+        run: npm run generate
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add output/
+          git diff --staged --quiet || git commit -m "📊 Update contribution graphs"
+          git push
+

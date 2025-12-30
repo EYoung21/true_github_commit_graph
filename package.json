@@ -1,0 +1,41 @@
+{
+  "name": "true-github-commit-graph",
+  "version": "1.0.0",
+  "description": "Generate GitHub contribution graph based on lines of code, not just commits",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node -r dotenv/config dist/app.js",
+    "dev": "ts-node -r dotenv/config src/app.ts",
+    "generate": "npm run build && npm start",
+    "vercel-build": "tsc"
+  },
+  "keywords": [
+    "github",
+    "contribution-graph",
+    "lines-of-code",
+    "profile-card"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "axios": "^1.6.2",
+    "d3": "^7.8.5",
+    "dotenv": "^16.3.1",
+    "jsdom": "^23.0.1",
+    "retry-axios": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.3",
+    "@types/jsdom": "^21.1.6",
+    "@types/node": "^20.10.5",
+    "@vercel/node": "^3.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
+
