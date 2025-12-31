@@ -227,10 +227,14 @@ function createRecentCommitsSVG(
         const dateStr = currentDate.toISOString().split('T')[0];
         const dayData = dailyMap.get(dateStr);
         const lines = dayData?.lines || 0;
+        const commits = dayData?.count || 0;
         const level = getLevel(lines, maxLines);
         const x = gridStartX + weekIdx * (cellSize + cellGap);
         const y = gridStartY + dayIdx * (cellSize + cellGap);
-        cells += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="2" fill="${theme.levels[level]}"/>`;
+        const tooltip = lines > 0 
+          ? `${formatNumber(lines)} lines changed in ${commits} commit${commits !== 1 ? 's' : ''} on ${dateStr}`
+          : `No contributions on ${dateStr}`;
+        cells += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="2" fill="${theme.levels[level]}"><title>${tooltip}</title></rect>`;
 
         const month = currentDate.getMonth();
         if (dayIdx === 0 && month !== lastMonth) {

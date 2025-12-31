@@ -215,10 +215,14 @@ function createSVG(
         const dateStr = currentDate.toISOString().split('T')[0];
         const contribution = dailyMap.get(dateStr);
         const lines = contribution?.totalLines || 0;
+        const commits = contribution?.commits || 0;
         const level = getLevel(lines, maxLines);
         const x = gridStartX + weekIdx * (cellSize + cellGap);
         const y = gridStartY + dayIdx * (cellSize + cellGap);
-        cells += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="2" fill="${theme.levels[level]}"/>`;
+        const tooltip = lines > 0 
+          ? `${formatNumber(lines)} lines in ${commits} commit${commits !== 1 ? 's' : ''} on ${dateStr}`
+          : `No contributions on ${dateStr}`;
+        cells += `<rect x="${x}" y="${y}" width="${cellSize}" height="${cellSize}" rx="2" fill="${theme.levels[level]}"><title>${tooltip}</title></rect>`;
 
         // Month label
         const month = currentDate.getMonth();
