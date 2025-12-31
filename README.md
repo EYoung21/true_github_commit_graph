@@ -145,7 +145,7 @@ Use `?theme=THEME_NAME` in your URL:
 ## ⚙️ API Endpoints
 
 ### Recent Commits (Recommended)
-- `/api/graph-recent` - Shows last X commits in a 90-day calendar view
+- `/api/graph-recent` - Shows last X commits (calendar spans from earliest to today)
 - `/api/stats-recent` - Stats for last X commits
 
 ### Yearly Graph
