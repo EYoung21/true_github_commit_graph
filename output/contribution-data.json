@@ -1,25 +1,32 @@
 {
   "username": "EYoung21",
-  "generatedAt": "2025-12-31T00:21:34.728Z",
+  "generatedAt": "2025-12-31T05:18:22.532Z",
   "dateRange": {
     "start": "2024-12-31",
     "end": "2025-12-31"
   },
   "totals": {
-    "linesAdded": 698987,
-    "linesDeleted": 118534,
-    "totalLines": 817521,
-    "totalCommits": 1878,
-    "filteredCommits": 721
+    "linesAdded": 699298,
+    "linesDeleted": 118455,
+    "totalLines": 817753,
+    "totalCommits": 1876,
+    "filteredCommits": 717
   },
   "stats": {
     "contributingDays": 209,
-    "longestStreak": 120,
-    "currentStreak": 120,
-    "avgLinesPerDay": 3912,
-    "avgLinesPerCommit": 435
+    "longestStreak": 121,
+    "currentStreak": 121,
+    "avgLinesPerDay": 3913,
+    "avgLinesPerCommit": 436
   },
   "dailyContributions": {
+    "2025-12-31": {
+      "date": "2025-12-31",
+      "linesAdded": 385,
+      "linesDeleted": 13,
+      "totalLines": 398,
+      "commits": 2
+    },
     "2025-12-30": {
       "date": "2025-12-30",
       "linesAdded": 2999,
@@ -27,61 +34,12 @@
       "totalLines": 3491,
       "commits": 40
     },
-    "2025-12-15": {
-      "date": "2025-12-15",
-      "linesAdded": 13482,
-      "linesDeleted": 0,
-      "totalLines": 13482,
-      "commits": 5
-    },
-    "2025-08-26": {
-      "date": "2025-08-26",
-      "linesAdded": 107,
-      "linesDeleted": 230,
-      "totalLines": 337,
-      "commits": 7
-    },
-    "2025-08-24": {
-      "date": "2025-08-24",
-      "linesAdded": 199,
-      "linesDeleted": 0,
-      "totalLines": 199,
-      "commits": 10
-    },
-    "2025-06-26": {
-      "date": "2025-06-26",
-      "linesAdded": 484,
-      "linesDeleted": 590,
-      "totalLines": 1074,
-      "commits": 18
-    },
-    "2025-02-17": {
-      "date": "2025-02-17",
-      "linesAdded": 30156,
-      "linesDeleted": 28,
-      "totalLines": 30184,
-      "commits": 4
-    },
-    "2025-01-08": {
-      "date": "2025-01-08",
-      "linesAdded": 0,
-      "linesDeleted": 0,
-      "totalLines": 0,
-      "commits": 1
-    },
     "2025-12-29": {
       "date": "2025-12-29",
       "linesAdded": 35504,
       "linesDeleted": 12070,
       "totalLines": 47574,
       "commits": 14
-    },
-    "2025-12-28": {
-      "date": "2025-12-28",
-      "linesAdded": 21869,
-      "linesDeleted": 18,
-      "totalLines": 21887,
-      "commits": 6
     },
     "2025-12-17": {
       "date": "2025-12-17",
@@ -496,6 +454,13 @@
       "totalLines": 178,
       "commits": 2
     },
+    "2025-06-26": {
+      "date": "2025-06-26",
+      "linesAdded": 484,
+      "linesDeleted": 590,
+      "totalLines": 1074,
+      "commits": 18
+    },
     "2025-06-15": {
       "date": "2025-06-15",
       "linesAdded": 1547,
@@ -705,6 +670,48 @@
       "linesDeleted": 226,
       "totalLines": 2328,
       "commits": 9
+    },
+    "2025-12-15": {
+      "date": "2025-12-15",
+      "linesAdded": 13482,
+      "linesDeleted": 0,
+      "totalLines": 13482,
+      "commits": 5
+    },
+    "2025-08-26": {
+      "date": "2025-08-26",
+      "linesAdded": 107,
+      "linesDeleted": 230,
+      "totalLines": 337,
+      "commits": 7
+    },
+    "2025-08-24": {
+      "date": "2025-08-24",
+      "linesAdded": 199,
+      "linesDeleted": 0,
+      "totalLines": 199,
+      "commits": 10
+    },
+    "2025-02-17": {
+      "date": "2025-02-17",
+      "linesAdded": 30156,
+      "linesDeleted": 28,
+      "totalLines": 30184,
+      "commits": 4
+    },
+    "2025-01-08": {
+      "date": "2025-01-08",
+      "linesAdded": 0,
+      "linesDeleted": 0,
+      "totalLines": 0,
+      "commits": 1
+    },
+    "2025-12-28": {
+      "date": "2025-12-28",
+      "linesAdded": 21869,
+      "linesDeleted": 18,
+      "totalLines": 21887,
+      "commits": 6
     },
     "2025-12-26": {
       "date": "2025-12-26",
@@ -1167,13 +1174,6 @@
       "linesDeleted": 888,
       "totalLines": 3861,
       "commits": 66
-    },
-    "2024-12-31": {
-      "date": "2024-12-31",
-      "linesAdded": 74,
-      "linesDeleted": 92,
-      "totalLines": 166,
-      "commits": 4
     },
     "2025-05-03": {
       "date": "2025-05-03",
