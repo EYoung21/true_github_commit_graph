@@ -167,10 +167,12 @@ function createRecentCommitsSVG(
   commits: CommitData[],
   theme: Theme
 ): string {
-  const width = 850;
   const cellSize = 11, cellGap = 3;
   const gridStartX = 45, gridStartY = 65;
-  const gridHeight = 7 * (cellSize + cellGap); // 7 days
+  const gridHeight = 7 * (cellSize + cellGap); // 7 rows for days of week
+  const legendY = gridStartY + gridHeight + 20; // 20px below grid
+  const height = legendY + 20; // 20px padding at bottom
+  const width = 850;
 
   // Group commits by date
   const dailyMap = new Map<string, { lines: number; count: number }>();
@@ -245,10 +247,6 @@ function createRecentCommitsSVG(
     label ? `<text x="${gridStartX - 28}" y="${gridStartY + idx * (cellSize + cellGap) + 9}" fill="${theme.text}" font-size="9" opacity="0.6">${label}</text>` : ''
   ).join('');
 
-  // Position legend right below the grid
-  const legendY = gridStartY + gridHeight + 25;
-  const height = legendY + 20; // Dynamic height based on content
-  
   const legend = `
     <text x="${gridStartX}" y="${legendY}" fill="${theme.text}" font-size="9" opacity="0.6">Less</text>
     ${theme.levels.map((c, i) => `<rect x="${gridStartX + 30 + i * 13}" y="${legendY - 10}" width="11" height="11" rx="2" fill="${c}"/>`).join('')}
