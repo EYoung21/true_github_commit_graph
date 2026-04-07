@@ -32,7 +32,7 @@
 </svg></g><text x="232" y="20" fill="#e0def4" font-size="11px" opacity="0.8">Lines Added</text><text x="380" y="20" text-anchor="end" fill="#3fb950" font-size="12px" font-weight="600">+1.0M</text><g transform="translate(20, 30)" fill="#f85149">
 <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
   <path d="M2 7.75A.75.75 0 012.75 7h10a.75.75 0 010 1.5h-10A.75.75 0 012 7.75z"></path>
-</svg></g><text x="42" y="42" fill="#e0def4" font-size="11px" opacity="0.8">Lines Deleted</text><text x="190" y="42" text-anchor="end" fill="#f85149" font-size="12px" font-weight="600">-256.0K</text><g transform="translate(210, 30)" fill="#f97e72">
+</svg></g><text x="42" y="42" fill="#e0def4" font-size="11px" opacity="0.8">Lines Deleted</text><text x="190" y="42" text-anchor="end" fill="#f85149" font-size="12px" font-weight="600">-256.1K</text><g transform="translate(210, 30)" fill="#f97e72">
 <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
   <path d="M11.93 8.5a4.002 4.002 0 01-7.86 0H.75a.75.75 0 010-1.5h3.32a4.002 4.002 0 017.86 0h3.32a.75.75 0 010 1.5h-3.32zM8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"></path>
 </svg></g><text x="232" y="42" fill="#e0def4" font-size="11px" opacity="0.8">Total Commits</text><text x="380" y="42" text-anchor="end" fill="#f97e72" font-size="12px" font-weight="600">2.6K</text><g transform="translate(20, 52)" fill="#e0def4">
