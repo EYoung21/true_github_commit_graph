@@ -1,6 +1,6 @@
 {
   "username": "EYoung21",
-  "generatedAt": "2026-04-16T12:34:38.053Z",
+  "generatedAt": "2026-04-16T18:39:36.551Z",
   "dateRange": {
     "start": "2025-04-16",
     "end": "2026-04-16"
@@ -20,6 +20,20 @@
     "avgLinesPerCommit": 473
   },
   "dailyContributions": {
+    "2025-12-31": {
+      "date": "2025-12-31",
+      "linesAdded": 1922,
+      "linesDeleted": 91,
+      "totalLines": 2013,
+      "commits": 9
+    },
+    "2025-12-30": {
+      "date": "2025-12-30",
+      "linesAdded": 2999,
+      "linesDeleted": 492,
+      "totalLines": 3491,
+      "commits": 40
+    },
     "2026-04-16": {
       "date": "2026-04-16",
       "linesAdded": 4950,
@@ -804,13 +818,6 @@
       "totalLines": 24203,
       "commits": 31
     },
-    "2025-12-31": {
-      "date": "2025-12-31",
-      "linesAdded": 1922,
-      "linesDeleted": 91,
-      "totalLines": 2013,
-      "commits": 9
-    },
     "2025-12-29": {
       "date": "2025-12-29",
       "linesAdded": 35504,
@@ -1097,13 +1104,6 @@
       "linesDeleted": 1372,
       "totalLines": 6811,
       "commits": 38
-    },
-    "2025-12-30": {
-      "date": "2025-12-30",
-      "linesAdded": 2999,
-      "linesDeleted": 492,
-      "totalLines": 3491,
-      "commits": 40
     },
     "2026-02-16": {
       "date": "2026-02-16",
