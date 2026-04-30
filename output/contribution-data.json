@@ -1,25 +1,39 @@
 {
   "username": "EYoung21",
-  "generatedAt": "2026-04-30T00:41:36.691Z",
+  "generatedAt": "2026-04-30T07:03:38.811Z",
   "dateRange": {
     "start": "2025-04-30",
     "end": "2026-04-30"
   },
   "totals": {
-    "linesAdded": 1233451,
-    "linesDeleted": 313660,
-    "totalLines": 1547111,
-    "totalCommits": 3370,
-    "filteredCommits": 1177
+    "linesAdded": 1223238,
+    "linesDeleted": 312552,
+    "totalLines": 1535790,
+    "totalCommits": 3359,
+    "filteredCommits": 1175
   },
   "stats": {
-    "contributingDays": 239,
+    "contributingDays": 238,
     "longestStreak": 132,
     "currentStreak": 59,
-    "avgLinesPerDay": 6473,
-    "avgLinesPerCommit": 459
+    "avgLinesPerDay": 6453,
+    "avgLinesPerCommit": 457
   },
   "dailyContributions": {
+    "2025-12-31": {
+      "date": "2025-12-31",
+      "linesAdded": 1922,
+      "linesDeleted": 91,
+      "totalLines": 2013,
+      "commits": 9
+    },
+    "2025-12-30": {
+      "date": "2025-12-30",
+      "linesAdded": 2999,
+      "linesDeleted": 492,
+      "totalLines": 3491,
+      "commits": 40
+    },
     "2026-04-29": {
       "date": "2026-04-29",
       "linesAdded": 620,
@@ -895,13 +909,6 @@
       "totalLines": 24203,
       "commits": 31
     },
-    "2025-12-31": {
-      "date": "2025-12-31",
-      "linesAdded": 1922,
-      "linesDeleted": 91,
-      "totalLines": 2013,
-      "commits": 9
-    },
     "2025-12-29": {
       "date": "2025-12-29",
       "linesAdded": 35504,
@@ -1174,13 +1181,6 @@
       "linesDeleted": 267,
       "totalLines": 630,
       "commits": 1
-    },
-    "2025-12-30": {
-      "date": "2025-12-30",
-      "linesAdded": 2999,
-      "linesDeleted": 492,
-      "totalLines": 3491,
-      "commits": 40
     },
     "2026-04-24": {
       "date": "2026-04-24",
@@ -1629,13 +1629,6 @@
       "linesDeleted": 321,
       "totalLines": 5288,
       "commits": 15
-    },
-    "2025-04-30": {
-      "date": "2025-04-30",
-      "linesAdded": 10213,
-      "linesDeleted": 1108,
-      "totalLines": 11321,
-      "commits": 11
     },
     "2025-06-07": {
       "date": "2025-06-07",
