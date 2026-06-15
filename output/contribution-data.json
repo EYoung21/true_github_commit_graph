@@ -1,25 +1,39 @@
 {
   "username": "EYoung21",
-  "generatedAt": "2026-06-15T08:14:18.976Z",
+  "generatedAt": "2026-06-15T14:21:49.520Z",
   "dateRange": {
     "start": "2025-06-15",
     "end": "2026-06-15"
   },
   "totals": {
-    "linesAdded": 1429593,
-    "linesDeleted": 369109,
-    "totalLines": 1798702,
-    "totalCommits": 4424,
+    "linesAdded": 1429207,
+    "linesDeleted": 368815,
+    "totalLines": 1798022,
+    "totalCommits": 4421,
     "filteredCommits": 1494
   },
   "stats": {
     "contributingDays": 271,
     "longestStreak": 132,
     "currentStreak": 105,
-    "avgLinesPerDay": 6637,
+    "avgLinesPerDay": 6635,
     "avgLinesPerCommit": 407
   },
   "dailyContributions": {
+    "2025-12-31": {
+      "date": "2025-12-31",
+      "linesAdded": 1922,
+      "linesDeleted": 91,
+      "totalLines": 2013,
+      "commits": 9
+    },
+    "2025-12-30": {
+      "date": "2025-12-30",
+      "linesAdded": 2999,
+      "linesDeleted": 492,
+      "totalLines": 3491,
+      "commits": 40
+    },
     "2026-06-15": {
       "date": "2026-06-15",
       "linesAdded": 205,
@@ -1154,20 +1168,6 @@
       "totalLines": 3510,
       "commits": 13
     },
-    "2025-12-31": {
-      "date": "2025-12-31",
-      "linesAdded": 1922,
-      "linesDeleted": 91,
-      "totalLines": 2013,
-      "commits": 9
-    },
-    "2025-12-30": {
-      "date": "2025-12-30",
-      "linesAdded": 2999,
-      "linesDeleted": 492,
-      "totalLines": 3491,
-      "commits": 40
-    },
     "2026-05-01": {
       "date": "2026-05-01",
       "linesAdded": 2377,
@@ -1548,10 +1548,10 @@
     },
     "2025-06-15": {
       "date": "2025-06-15",
-      "linesAdded": 511,
-      "linesDeleted": 421,
-      "totalLines": 932,
-      "commits": 5
+      "linesAdded": 125,
+      "linesDeleted": 127,
+      "totalLines": 252,
+      "commits": 2
     },
     "2026-01-03": {
       "date": "2026-01-03",
