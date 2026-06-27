@@ -1,31 +1,38 @@
 {
   "username": "EYoung21",
-  "generatedAt": "2026-06-26T19:04:21.229Z",
+  "generatedAt": "2026-06-27T01:01:18.054Z",
   "dateRange": {
-    "start": "2025-06-26",
-    "end": "2026-06-26"
+    "start": "2025-06-27",
+    "end": "2026-06-27"
   },
   "totals": {
-    "linesAdded": 1490121,
-    "linesDeleted": 383252,
-    "totalLines": 1873373,
-    "totalCommits": 4906,
-    "filteredCommits": 1609
+    "linesAdded": 1425101,
+    "linesDeleted": 375167,
+    "totalLines": 1800268,
+    "totalCommits": 4903,
+    "filteredCommits": 1594
   },
   "stats": {
-    "contributingDays": 264,
-    "longestStreak": 116,
-    "currentStreak": 116,
-    "avgLinesPerDay": 7096,
-    "avgLinesPerCommit": 382
+    "contributingDays": 259,
+    "longestStreak": 117,
+    "currentStreak": 117,
+    "avgLinesPerDay": 6951,
+    "avgLinesPerCommit": 367
   },
   "dailyContributions": {
+    "2026-06-27": {
+      "date": "2026-06-27",
+      "linesAdded": 1172,
+      "linesDeleted": 323,
+      "totalLines": 1495,
+      "commits": 3
+    },
     "2026-06-26": {
       "date": "2026-06-26",
-      "linesAdded": 3643,
-      "linesDeleted": 4663,
-      "totalLines": 8306,
-      "commits": 11
+      "linesAdded": 5503,
+      "linesDeleted": 5575,
+      "totalLines": 11078,
+      "commits": 49
     },
     "2026-06-25": {
       "date": "2026-06-25",
@@ -48,47 +55,12 @@
       "totalLines": 6951,
       "commits": 18
     },
-    "2026-06-22": {
-      "date": "2026-06-22",
-      "linesAdded": 11314,
-      "linesDeleted": 2889,
-      "totalLines": 14203,
-      "commits": 26
-    },
-    "2026-06-21": {
-      "date": "2026-06-21",
-      "linesAdded": 2825,
-      "linesDeleted": 499,
-      "totalLines": 3324,
-      "commits": 30
-    },
     "2026-06-20": {
       "date": "2026-06-20",
       "linesAdded": 3827,
       "linesDeleted": 888,
       "totalLines": 4715,
       "commits": 41
-    },
-    "2026-06-19": {
-      "date": "2026-06-19",
-      "linesAdded": 2753,
-      "linesDeleted": 908,
-      "totalLines": 3661,
-      "commits": 17
-    },
-    "2026-06-18": {
-      "date": "2026-06-18",
-      "linesAdded": 561,
-      "linesDeleted": 141,
-      "totalLines": 702,
-      "commits": 14
-    },
-    "2026-06-17": {
-      "date": "2026-06-17",
-      "linesAdded": 10197,
-      "linesDeleted": 1827,
-      "totalLines": 12024,
-      "commits": 56
     },
     "2026-06-16": {
       "date": "2026-06-16",
@@ -97,26 +69,12 @@
       "totalLines": 9713,
       "commits": 40
     },
-    "2026-06-15": {
-      "date": "2026-06-15",
-      "linesAdded": 8226,
-      "linesDeleted": 1711,
-      "totalLines": 9937,
-      "commits": 50
-    },
-    "2026-06-14": {
-      "date": "2026-06-14",
-      "linesAdded": 2634,
-      "linesDeleted": 1612,
-      "totalLines": 4246,
-      "commits": 17
-    },
-    "2026-06-12": {
-      "date": "2026-06-12",
-      "linesAdded": 8771,
-      "linesDeleted": 1818,
-      "totalLines": 10589,
-      "commits": 55
+    "2026-06-11": {
+      "date": "2026-06-11",
+      "linesAdded": 5270,
+      "linesDeleted": 340,
+      "totalLines": 5610,
+      "commits": 28
     },
     "2026-06-10": {
       "date": "2026-06-10",
@@ -131,300 +89,6 @@
       "linesDeleted": 3246,
       "totalLines": 21115,
       "commits": 49
-    },
-    "2026-05-15": {
-      "date": "2026-05-15",
-      "linesAdded": 9640,
-      "linesDeleted": 3242,
-      "totalLines": 12882,
-      "commits": 43
-    },
-    "2026-05-13": {
-      "date": "2026-05-13",
-      "linesAdded": 21050,
-      "linesDeleted": 7054,
-      "totalLines": 28104,
-      "commits": 63
-    },
-    "2026-05-04": {
-      "date": "2026-05-04",
-      "linesAdded": 6694,
-      "linesDeleted": 947,
-      "totalLines": 7641,
-      "commits": 35
-    },
-    "2026-05-01": {
-      "date": "2026-05-01",
-      "linesAdded": 2377,
-      "linesDeleted": 376,
-      "totalLines": 2753,
-      "commits": 11
-    },
-    "2026-04-23": {
-      "date": "2026-04-23",
-      "linesAdded": 15337,
-      "linesDeleted": 6885,
-      "totalLines": 22222,
-      "commits": 50
-    },
-    "2026-04-22": {
-      "date": "2026-04-22",
-      "linesAdded": 26131,
-      "linesDeleted": 4480,
-      "totalLines": 30611,
-      "commits": 53
-    },
-    "2026-04-21": {
-      "date": "2026-04-21",
-      "linesAdded": 16403,
-      "linesDeleted": 4549,
-      "totalLines": 20952,
-      "commits": 50
-    },
-    "2026-04-20": {
-      "date": "2026-04-20",
-      "linesAdded": 6308,
-      "linesDeleted": 1534,
-      "totalLines": 7842,
-      "commits": 44
-    },
-    "2026-04-18": {
-      "date": "2026-04-18",
-      "linesAdded": 18903,
-      "linesDeleted": 1187,
-      "totalLines": 20090,
-      "commits": 36
-    },
-    "2026-04-13": {
-      "date": "2026-04-13",
-      "linesAdded": 5399,
-      "linesDeleted": 1424,
-      "totalLines": 6823,
-      "commits": 21
-    },
-    "2026-04-08": {
-      "date": "2026-04-08",
-      "linesAdded": 147,
-      "linesDeleted": 23,
-      "totalLines": 170,
-      "commits": 4
-    },
-    "2026-04-07": {
-      "date": "2026-04-07",
-      "linesAdded": 12068,
-      "linesDeleted": 685,
-      "totalLines": 12753,
-      "commits": 27
-    },
-    "2026-04-03": {
-      "date": "2026-04-03",
-      "linesAdded": 8191,
-      "linesDeleted": 208,
-      "totalLines": 8399,
-      "commits": 12
-    },
-    "2026-04-02": {
-      "date": "2026-04-02",
-      "linesAdded": 138363,
-      "linesDeleted": 854,
-      "totalLines": 139217,
-      "commits": 23
-    },
-    "2026-06-11": {
-      "date": "2026-06-11",
-      "linesAdded": 5270,
-      "linesDeleted": 340,
-      "totalLines": 5610,
-      "commits": 28
-    },
-    "2026-04-05": {
-      "date": "2026-04-05",
-      "linesAdded": 2624,
-      "linesDeleted": 1005,
-      "totalLines": 3629,
-      "commits": 17
-    },
-    "2026-03-31": {
-      "date": "2026-03-31",
-      "linesAdded": 21730,
-      "linesDeleted": 691,
-      "totalLines": 22421,
-      "commits": 37
-    },
-    "2026-03-25": {
-      "date": "2026-03-25",
-      "linesAdded": 1578,
-      "linesDeleted": 1463,
-      "totalLines": 3041,
-      "commits": 37
-    },
-    "2026-03-24": {
-      "date": "2026-03-24",
-      "linesAdded": 5550,
-      "linesDeleted": 1526,
-      "totalLines": 7076,
-      "commits": 26
-    },
-    "2026-03-23": {
-      "date": "2026-03-23",
-      "linesAdded": 10894,
-      "linesDeleted": 1202,
-      "totalLines": 12096,
-      "commits": 45
-    },
-    "2026-03-22": {
-      "date": "2026-03-22",
-      "linesAdded": 54932,
-      "linesDeleted": 10978,
-      "totalLines": 65910,
-      "commits": 23
-    },
-    "2026-03-21": {
-      "date": "2026-03-21",
-      "linesAdded": 12763,
-      "linesDeleted": 1508,
-      "totalLines": 14271,
-      "commits": 53
-    },
-    "2026-03-18": {
-      "date": "2026-03-18",
-      "linesAdded": 1395,
-      "linesDeleted": 0,
-      "totalLines": 1395,
-      "commits": 10
-    },
-    "2026-03-17": {
-      "date": "2026-03-17",
-      "linesAdded": 1499,
-      "linesDeleted": 234,
-      "totalLines": 1733,
-      "commits": 12
-    },
-    "2026-03-12": {
-      "date": "2026-03-12",
-      "linesAdded": 2838,
-      "linesDeleted": 379,
-      "totalLines": 3217,
-      "commits": 18
-    },
-    "2026-03-11": {
-      "date": "2026-03-11",
-      "linesAdded": 6460,
-      "linesDeleted": 1225,
-      "totalLines": 7685,
-      "commits": 16
-    },
-    "2026-03-07": {
-      "date": "2026-03-07",
-      "linesAdded": 4154,
-      "linesDeleted": 7126,
-      "totalLines": 11280,
-      "commits": 4
-    },
-    "2026-03-02": {
-      "date": "2026-03-02",
-      "linesAdded": 3843,
-      "linesDeleted": 58,
-      "totalLines": 3901,
-      "commits": 11
-    },
-    "2026-03-01": {
-      "date": "2026-03-01",
-      "linesAdded": 22066,
-      "linesDeleted": 1966,
-      "totalLines": 24032,
-      "commits": 8
-    },
-    "2026-02-28": {
-      "date": "2026-02-28",
-      "linesAdded": 50018,
-      "linesDeleted": 6452,
-      "totalLines": 56470,
-      "commits": 5
-    },
-    "2026-02-27": {
-      "date": "2026-02-27",
-      "linesAdded": 54326,
-      "linesDeleted": 49422,
-      "totalLines": 103748,
-      "commits": 5
-    },
-    "2026-02-26": {
-      "date": "2026-02-26",
-      "linesAdded": 33065,
-      "linesDeleted": 6986,
-      "totalLines": 40051,
-      "commits": 29
-    },
-    "2026-02-16": {
-      "date": "2026-02-16",
-      "linesAdded": 7507,
-      "linesDeleted": 106,
-      "totalLines": 7613,
-      "commits": 7
-    },
-    "2026-01-22": {
-      "date": "2026-01-22",
-      "linesAdded": 3202,
-      "linesDeleted": 549,
-      "totalLines": 3751,
-      "commits": 39
-    },
-    "2026-01-21": {
-      "date": "2026-01-21",
-      "linesAdded": 16168,
-      "linesDeleted": 805,
-      "totalLines": 16973,
-      "commits": 14
-    },
-    "2025-12-31": {
-      "date": "2025-12-31",
-      "linesAdded": 1922,
-      "linesDeleted": 91,
-      "totalLines": 2013,
-      "commits": 9
-    },
-    "2025-12-30": {
-      "date": "2025-12-30",
-      "linesAdded": 2999,
-      "linesDeleted": 492,
-      "totalLines": 3491,
-      "commits": 40
-    },
-    "2026-06-13": {
-      "date": "2026-06-13",
-      "linesAdded": 506,
-      "linesDeleted": 55,
-      "totalLines": 561,
-      "commits": 6
-    },
-    "2026-06-09": {
-      "date": "2026-06-09",
-      "linesAdded": 9944,
-      "linesDeleted": 2465,
-      "totalLines": 12409,
-      "commits": 27
-    },
-    "2026-06-08": {
-      "date": "2026-06-08",
-      "linesAdded": 2457,
-      "linesDeleted": 225,
-      "totalLines": 2682,
-      "commits": 20
-    },
-    "2026-06-07": {
-      "date": "2026-06-07",
-      "linesAdded": 6253,
-      "linesDeleted": 6,
-      "totalLines": 6259,
-      "commits": 17
-    },
-    "2026-06-05": {
-      "date": "2026-06-05",
-      "linesAdded": 11369,
-      "linesDeleted": 4645,
-      "totalLines": 16014,
-      "commits": 29
     },
     "2026-06-04": {
       "date": "2026-06-04",
@@ -447,27 +111,6 @@
       "totalLines": 8059,
       "commits": 45
     },
-    "2026-06-01": {
-      "date": "2026-06-01",
-      "linesAdded": 2178,
-      "linesDeleted": 787,
-      "totalLines": 2965,
-      "commits": 16
-    },
-    "2026-05-31": {
-      "date": "2026-05-31",
-      "linesAdded": 7924,
-      "linesDeleted": 1192,
-      "totalLines": 9116,
-      "commits": 31
-    },
-    "2026-05-30": {
-      "date": "2026-05-30",
-      "linesAdded": 2961,
-      "linesDeleted": 1286,
-      "totalLines": 4247,
-      "commits": 5
-    },
     "2026-05-29": {
       "date": "2026-05-29",
       "linesAdded": 1401,
@@ -481,48 +124,6 @@
       "linesDeleted": 858,
       "totalLines": 4217,
       "commits": 16
-    },
-    "2026-05-27": {
-      "date": "2026-05-27",
-      "linesAdded": 1987,
-      "linesDeleted": 417,
-      "totalLines": 2404,
-      "commits": 11
-    },
-    "2026-05-26": {
-      "date": "2026-05-26",
-      "linesAdded": 917,
-      "linesDeleted": 34,
-      "totalLines": 951,
-      "commits": 4
-    },
-    "2026-05-25": {
-      "date": "2026-05-25",
-      "linesAdded": 30,
-      "linesDeleted": 91,
-      "totalLines": 121,
-      "commits": 6
-    },
-    "2026-05-24": {
-      "date": "2026-05-24",
-      "linesAdded": 3342,
-      "linesDeleted": 1101,
-      "totalLines": 4443,
-      "commits": 25
-    },
-    "2026-05-22": {
-      "date": "2026-05-22",
-      "linesAdded": 6821,
-      "linesDeleted": 1327,
-      "totalLines": 8148,
-      "commits": 21
-    },
-    "2026-05-21": {
-      "date": "2026-05-21",
-      "linesAdded": 2338,
-      "linesDeleted": 509,
-      "totalLines": 2847,
-      "commits": 10
     },
     "2026-05-20": {
       "date": "2026-05-20",
@@ -559,6 +160,27 @@
       "totalLines": 5891,
       "commits": 44
     },
+    "2026-05-15": {
+      "date": "2026-05-15",
+      "linesAdded": 9640,
+      "linesDeleted": 3242,
+      "totalLines": 12882,
+      "commits": 43
+    },
+    "2026-05-13": {
+      "date": "2026-05-13",
+      "linesAdded": 21050,
+      "linesDeleted": 7054,
+      "totalLines": 28104,
+      "commits": 63
+    },
+    "2026-05-12": {
+      "date": "2026-05-12",
+      "linesAdded": 4510,
+      "linesDeleted": 1644,
+      "totalLines": 6154,
+      "commits": 45
+    },
     "2026-05-11": {
       "date": "2026-05-11",
       "linesAdded": 5234,
@@ -566,26 +188,12 @@
       "totalLines": 5604,
       "commits": 28
     },
-    "2026-05-10": {
-      "date": "2026-05-10",
-      "linesAdded": 997,
-      "linesDeleted": 333,
-      "totalLines": 1330,
-      "commits": 16
-    },
     "2026-05-09": {
       "date": "2026-05-09",
       "linesAdded": 2185,
       "linesDeleted": 698,
       "totalLines": 2883,
       "commits": 22
-    },
-    "2026-05-08": {
-      "date": "2026-05-08",
-      "linesAdded": 1462,
-      "linesDeleted": 397,
-      "totalLines": 1859,
-      "commits": 7
     },
     "2026-05-07": {
       "date": "2026-05-07",
@@ -629,13 +237,6 @@
       "totalLines": 829,
       "commits": 12
     },
-    "2026-04-28": {
-      "date": "2026-04-28",
-      "linesAdded": 4007,
-      "linesDeleted": 1047,
-      "totalLines": 5054,
-      "commits": 27
-    },
     "2026-04-27": {
       "date": "2026-04-27",
       "linesAdded": 1162,
@@ -657,12 +258,61 @@
       "totalLines": 9368,
       "commits": 27
     },
+    "2026-04-24": {
+      "date": "2026-04-24",
+      "linesAdded": 1054,
+      "linesDeleted": 387,
+      "totalLines": 1441,
+      "commits": 5
+    },
+    "2026-04-23": {
+      "date": "2026-04-23",
+      "linesAdded": 15337,
+      "linesDeleted": 6885,
+      "totalLines": 22222,
+      "commits": 50
+    },
+    "2026-04-22": {
+      "date": "2026-04-22",
+      "linesAdded": 26131,
+      "linesDeleted": 4480,
+      "totalLines": 30611,
+      "commits": 53
+    },
+    "2026-04-21": {
+      "date": "2026-04-21",
+      "linesAdded": 16403,
+      "linesDeleted": 4549,
+      "totalLines": 20952,
+      "commits": 50
+    },
+    "2026-04-20": {
+      "date": "2026-04-20",
+      "linesAdded": 6308,
+      "linesDeleted": 1534,
+      "totalLines": 7842,
+      "commits": 44
+    },
     "2026-04-19": {
       "date": "2026-04-19",
       "linesAdded": 21890,
       "linesDeleted": 2335,
       "totalLines": 24225,
       "commits": 51
+    },
+    "2026-04-18": {
+      "date": "2026-04-18",
+      "linesAdded": 18903,
+      "linesDeleted": 1187,
+      "totalLines": 20090,
+      "commits": 36
+    },
+    "2026-04-17": {
+      "date": "2026-04-17",
+      "linesAdded": 1010,
+      "linesDeleted": 597,
+      "totalLines": 1607,
+      "commits": 37
     },
     "2026-04-16": {
       "date": "2026-04-16",
@@ -685,6 +335,13 @@
       "totalLines": 9639,
       "commits": 37
     },
+    "2026-04-13": {
+      "date": "2026-04-13",
+      "linesAdded": 5399,
+      "linesDeleted": 1424,
+      "totalLines": 6823,
+      "commits": 21
+    },
     "2026-04-12": {
       "date": "2026-04-12",
       "linesAdded": 8620,
@@ -698,6 +355,188 @@
       "linesDeleted": 822,
       "totalLines": 5066,
       "commits": 31
+    },
+    "2026-06-22": {
+      "date": "2026-06-22",
+      "linesAdded": 11314,
+      "linesDeleted": 2889,
+      "totalLines": 14203,
+      "commits": 26
+    },
+    "2026-06-21": {
+      "date": "2026-06-21",
+      "linesAdded": 2825,
+      "linesDeleted": 499,
+      "totalLines": 3324,
+      "commits": 30
+    },
+    "2026-06-19": {
+      "date": "2026-06-19",
+      "linesAdded": 2753,
+      "linesDeleted": 908,
+      "totalLines": 3661,
+      "commits": 17
+    },
+    "2026-06-18": {
+      "date": "2026-06-18",
+      "linesAdded": 561,
+      "linesDeleted": 141,
+      "totalLines": 702,
+      "commits": 14
+    },
+    "2026-06-17": {
+      "date": "2026-06-17",
+      "linesAdded": 10197,
+      "linesDeleted": 1827,
+      "totalLines": 12024,
+      "commits": 56
+    },
+    "2026-06-15": {
+      "date": "2026-06-15",
+      "linesAdded": 8226,
+      "linesDeleted": 1711,
+      "totalLines": 9937,
+      "commits": 50
+    },
+    "2026-06-14": {
+      "date": "2026-06-14",
+      "linesAdded": 2634,
+      "linesDeleted": 1612,
+      "totalLines": 4246,
+      "commits": 17
+    },
+    "2026-06-13": {
+      "date": "2026-06-13",
+      "linesAdded": 506,
+      "linesDeleted": 55,
+      "totalLines": 561,
+      "commits": 6
+    },
+    "2026-06-12": {
+      "date": "2026-06-12",
+      "linesAdded": 8771,
+      "linesDeleted": 1818,
+      "totalLines": 10589,
+      "commits": 55
+    },
+    "2026-06-09": {
+      "date": "2026-06-09",
+      "linesAdded": 9944,
+      "linesDeleted": 2465,
+      "totalLines": 12409,
+      "commits": 27
+    },
+    "2026-06-08": {
+      "date": "2026-06-08",
+      "linesAdded": 2457,
+      "linesDeleted": 225,
+      "totalLines": 2682,
+      "commits": 20
+    },
+    "2026-06-07": {
+      "date": "2026-06-07",
+      "linesAdded": 6253,
+      "linesDeleted": 6,
+      "totalLines": 6259,
+      "commits": 17
+    },
+    "2026-06-05": {
+      "date": "2026-06-05",
+      "linesAdded": 11369,
+      "linesDeleted": 4645,
+      "totalLines": 16014,
+      "commits": 29
+    },
+    "2026-06-01": {
+      "date": "2026-06-01",
+      "linesAdded": 2178,
+      "linesDeleted": 787,
+      "totalLines": 2965,
+      "commits": 16
+    },
+    "2026-05-31": {
+      "date": "2026-05-31",
+      "linesAdded": 7924,
+      "linesDeleted": 1192,
+      "totalLines": 9116,
+      "commits": 31
+    },
+    "2026-05-30": {
+      "date": "2026-05-30",
+      "linesAdded": 2961,
+      "linesDeleted": 1286,
+      "totalLines": 4247,
+      "commits": 5
+    },
+    "2026-05-27": {
+      "date": "2026-05-27",
+      "linesAdded": 1987,
+      "linesDeleted": 417,
+      "totalLines": 2404,
+      "commits": 11
+    },
+    "2026-05-26": {
+      "date": "2026-05-26",
+      "linesAdded": 917,
+      "linesDeleted": 34,
+      "totalLines": 951,
+      "commits": 4
+    },
+    "2026-05-25": {
+      "date": "2026-05-25",
+      "linesAdded": 30,
+      "linesDeleted": 91,
+      "totalLines": 121,
+      "commits": 6
+    },
+    "2026-05-24": {
+      "date": "2026-05-24",
+      "linesAdded": 3342,
+      "linesDeleted": 1101,
+      "totalLines": 4443,
+      "commits": 25
+    },
+    "2026-05-22": {
+      "date": "2026-05-22",
+      "linesAdded": 6821,
+      "linesDeleted": 1327,
+      "totalLines": 8148,
+      "commits": 21
+    },
+    "2026-05-21": {
+      "date": "2026-05-21",
+      "linesAdded": 2338,
+      "linesDeleted": 509,
+      "totalLines": 2847,
+      "commits": 10
+    },
+    "2026-05-10": {
+      "date": "2026-05-10",
+      "linesAdded": 997,
+      "linesDeleted": 333,
+      "totalLines": 1330,
+      "commits": 16
+    },
+    "2026-05-08": {
+      "date": "2026-05-08",
+      "linesAdded": 1462,
+      "linesDeleted": 397,
+      "totalLines": 1859,
+      "commits": 7
+    },
+    "2026-05-04": {
+      "date": "2026-05-04",
+      "linesAdded": 6694,
+      "linesDeleted": 947,
+      "totalLines": 7641,
+      "commits": 35
+    },
+    "2026-04-28": {
+      "date": "2026-04-28",
+      "linesAdded": 4007,
+      "linesDeleted": 1047,
+      "totalLines": 5054,
+      "commits": 27
     },
     "2026-04-10": {
       "date": "2026-04-10",
@@ -713,12 +552,40 @@
       "totalLines": 3237,
       "commits": 19
     },
+    "2026-04-08": {
+      "date": "2026-04-08",
+      "linesAdded": 147,
+      "linesDeleted": 23,
+      "totalLines": 170,
+      "commits": 4
+    },
+    "2026-04-05": {
+      "date": "2026-04-05",
+      "linesAdded": 2624,
+      "linesDeleted": 1005,
+      "totalLines": 3629,
+      "commits": 17
+    },
     "2026-04-04": {
       "date": "2026-04-04",
       "linesAdded": 12378,
       "linesDeleted": 4361,
       "totalLines": 16739,
       "commits": 19
+    },
+    "2026-04-03": {
+      "date": "2026-04-03",
+      "linesAdded": 8191,
+      "linesDeleted": 208,
+      "totalLines": 8399,
+      "commits": 12
+    },
+    "2026-04-02": {
+      "date": "2026-04-02",
+      "linesAdded": 138363,
+      "linesDeleted": 854,
+      "totalLines": 139217,
+      "commits": 23
     },
     "2026-04-01": {
       "date": "2026-04-01",
@@ -762,6 +629,34 @@
       "totalLines": 34164,
       "commits": 93
     },
+    "2026-03-24": {
+      "date": "2026-03-24",
+      "linesAdded": 5550,
+      "linesDeleted": 1526,
+      "totalLines": 7076,
+      "commits": 26
+    },
+    "2026-03-23": {
+      "date": "2026-03-23",
+      "linesAdded": 10894,
+      "linesDeleted": 1202,
+      "totalLines": 12096,
+      "commits": 45
+    },
+    "2026-03-22": {
+      "date": "2026-03-22",
+      "linesAdded": 54932,
+      "linesDeleted": 10978,
+      "totalLines": 65910,
+      "commits": 23
+    },
+    "2026-03-21": {
+      "date": "2026-03-21",
+      "linesAdded": 12763,
+      "linesDeleted": 1508,
+      "totalLines": 14271,
+      "commits": 53
+    },
     "2026-03-19": {
       "date": "2026-03-19",
       "linesAdded": 4581,
@@ -775,6 +670,20 @@
       "linesDeleted": 1722,
       "totalLines": 5354,
       "commits": 18
+    },
+    "2026-03-02": {
+      "date": "2026-03-02",
+      "linesAdded": 3843,
+      "linesDeleted": 58,
+      "totalLines": 3901,
+      "commits": 11
+    },
+    "2026-02-26": {
+      "date": "2026-02-26",
+      "linesAdded": 33065,
+      "linesDeleted": 6986,
+      "totalLines": 40051,
+      "commits": 29
     },
     "2026-02-25": {
       "date": "2026-02-25",
@@ -859,6 +768,20 @@
       "linesDeleted": 1289,
       "totalLines": 5604,
       "commits": 17
+    },
+    "2026-01-22": {
+      "date": "2026-01-22",
+      "linesAdded": 3202,
+      "linesDeleted": 549,
+      "totalLines": 3751,
+      "commits": 39
+    },
+    "2026-01-21": {
+      "date": "2026-01-21",
+      "linesAdded": 16168,
+      "linesDeleted": 805,
+      "totalLines": 16973,
+      "commits": 14
     },
     "2026-01-15": {
       "date": "2026-01-15",
@@ -1009,17 +932,17 @@
     },
     "2025-12-12": {
       "date": "2025-12-12",
-      "linesAdded": 1865,
-      "linesDeleted": 853,
-      "totalLines": 2718,
-      "commits": 22
+      "linesAdded": 1009,
+      "linesDeleted": 344,
+      "totalLines": 1353,
+      "commits": 20
     },
     "2025-12-10": {
       "date": "2025-12-10",
-      "linesAdded": 1494,
+      "linesAdded": 1236,
       "linesDeleted": 123,
-      "totalLines": 1617,
-      "commits": 10
+      "totalLines": 1359,
+      "commits": 8
     },
     "2025-12-04": {
       "date": "2025-12-04",
@@ -1037,10 +960,10 @@
     },
     "2025-11-21": {
       "date": "2025-11-21",
-      "linesAdded": 1676,
+      "linesAdded": 559,
       "linesDeleted": 175,
-      "totalLines": 1851,
-      "commits": 13
+      "totalLines": 734,
+      "commits": 12
     },
     "2025-11-19": {
       "date": "2025-11-19",
@@ -1170,9 +1093,9 @@
     },
     "2025-10-25": {
       "date": "2025-10-25",
-      "linesAdded": 8321,
+      "linesAdded": 6221,
       "linesDeleted": 1168,
-      "totalLines": 9489,
+      "totalLines": 7389,
       "commits": 25
     },
     "2025-10-21": {
@@ -1233,10 +1156,10 @@
     },
     "2025-09-29": {
       "date": "2025-09-29",
-      "linesAdded": 2545,
+      "linesAdded": 2318,
       "linesDeleted": 513,
-      "totalLines": 3058,
-      "commits": 9
+      "totalLines": 2831,
+      "commits": 8
     },
     "2025-09-28": {
       "date": "2025-09-28",
@@ -1343,11 +1266,18 @@
       "totalLines": 427,
       "commits": 1
     },
-    "2026-04-17": {
-      "date": "2026-04-17",
-      "linesAdded": 1010,
-      "linesDeleted": 597,
-      "totalLines": 1607,
+    "2026-04-07": {
+      "date": "2026-04-07",
+      "linesAdded": 12068,
+      "linesDeleted": 685,
+      "totalLines": 12753,
+      "commits": 27
+    },
+    "2026-03-31": {
+      "date": "2026-03-31",
+      "linesAdded": 21730,
+      "linesDeleted": 691,
+      "totalLines": 22421,
       "commits": 37
     },
     "2026-01-01": {
@@ -1356,6 +1286,13 @@
       "linesDeleted": 13961,
       "totalLines": 24203,
       "commits": 31
+    },
+    "2025-12-31": {
+      "date": "2025-12-31",
+      "linesAdded": 1922,
+      "linesDeleted": 91,
+      "totalLines": 2013,
+      "commits": 9
     },
     "2025-12-29": {
       "date": "2025-12-29",
@@ -1376,7 +1313,7 @@
       "linesAdded": 132,
       "linesDeleted": 20,
       "totalLines": 152,
-      "commits": 2
+      "commits": 1
     },
     "2025-11-29": {
       "date": "2025-11-29",
@@ -1408,10 +1345,10 @@
     },
     "2025-11-24": {
       "date": "2025-11-24",
-      "linesAdded": 484,
-      "linesDeleted": 73,
-      "totalLines": 557,
-      "commits": 4
+      "linesAdded": 70,
+      "linesDeleted": 40,
+      "totalLines": 110,
+      "commits": 2
     },
     "2025-11-22": {
       "date": "2025-11-22",
@@ -1474,7 +1411,7 @@
       "linesAdded": 101,
       "linesDeleted": 0,
       "totalLines": 101,
-      "commits": 3
+      "commits": 1
     },
     "2025-10-18": {
       "date": "2025-10-18",
@@ -1595,26 +1532,89 @@
       "totalLines": 178,
       "commits": 2
     },
-    "2025-06-26": {
-      "date": "2025-06-26",
-      "linesAdded": 59,
-      "linesDeleted": 7,
-      "totalLines": 66,
-      "commits": 2
+    "2026-05-01": {
+      "date": "2026-05-01",
+      "linesAdded": 2377,
+      "linesDeleted": 376,
+      "totalLines": 2753,
+      "commits": 11
     },
-    "2026-05-12": {
-      "date": "2026-05-12",
-      "linesAdded": 4510,
-      "linesDeleted": 1644,
-      "totalLines": 6154,
-      "commits": 45
+    "2026-03-25": {
+      "date": "2026-03-25",
+      "linesAdded": 1578,
+      "linesDeleted": 1463,
+      "totalLines": 3041,
+      "commits": 37
     },
-    "2026-04-24": {
-      "date": "2026-04-24",
-      "linesAdded": 1054,
-      "linesDeleted": 387,
-      "totalLines": 1441,
+    "2026-03-18": {
+      "date": "2026-03-18",
+      "linesAdded": 1395,
+      "linesDeleted": 0,
+      "totalLines": 1395,
+      "commits": 10
+    },
+    "2025-12-30": {
+      "date": "2025-12-30",
+      "linesAdded": 2999,
+      "linesDeleted": 492,
+      "totalLines": 3491,
+      "commits": 40
+    },
+    "2026-03-17": {
+      "date": "2026-03-17",
+      "linesAdded": 1499,
+      "linesDeleted": 234,
+      "totalLines": 1733,
+      "commits": 12
+    },
+    "2026-03-12": {
+      "date": "2026-03-12",
+      "linesAdded": 2838,
+      "linesDeleted": 379,
+      "totalLines": 3217,
+      "commits": 18
+    },
+    "2026-03-11": {
+      "date": "2026-03-11",
+      "linesAdded": 6460,
+      "linesDeleted": 1225,
+      "totalLines": 7685,
+      "commits": 16
+    },
+    "2026-03-07": {
+      "date": "2026-03-07",
+      "linesAdded": 4154,
+      "linesDeleted": 7126,
+      "totalLines": 11280,
+      "commits": 4
+    },
+    "2026-03-01": {
+      "date": "2026-03-01",
+      "linesAdded": 22066,
+      "linesDeleted": 1966,
+      "totalLines": 24032,
+      "commits": 8
+    },
+    "2026-02-28": {
+      "date": "2026-02-28",
+      "linesAdded": 50018,
+      "linesDeleted": 6452,
+      "totalLines": 56470,
       "commits": 5
+    },
+    "2026-02-27": {
+      "date": "2026-02-27",
+      "linesAdded": 54326,
+      "linesDeleted": 49422,
+      "totalLines": 103748,
+      "commits": 5
+    },
+    "2026-02-16": {
+      "date": "2026-02-16",
+      "linesAdded": 7507,
+      "linesDeleted": 106,
+      "totalLines": 7613,
+      "commits": 7
     },
     "2026-04-30": {
       "date": "2026-04-30",
@@ -1779,10 +1779,10 @@
     },
     "2025-08-18": {
       "date": "2025-08-18",
-      "linesAdded": 10587,
-      "linesDeleted": 5123,
-      "totalLines": 15710,
-      "commits": 9
+      "linesAdded": 4800,
+      "linesDeleted": 543,
+      "totalLines": 5343,
+      "commits": 7
     },
     "2026-03-20": {
       "date": "2026-03-20",
@@ -1800,10 +1800,10 @@
     },
     "2025-07-30": {
       "date": "2025-07-30",
-      "linesAdded": 39869,
-      "linesDeleted": 389,
-      "totalLines": 40258,
-      "commits": 14
+      "linesAdded": 717,
+      "linesDeleted": 137,
+      "totalLines": 854,
+      "commits": 6
     },
     "2025-07-09": {
       "date": "2025-07-09",
@@ -1860,62 +1860,6 @@
       "linesDeleted": 159,
       "totalLines": 1105,
       "commits": 24
-    },
-    "2025-07-21": {
-      "date": "2025-07-21",
-      "linesAdded": 1935,
-      "linesDeleted": 0,
-      "totalLines": 1935,
-      "commits": 3
-    },
-    "2025-08-14": {
-      "date": "2025-08-14",
-      "linesAdded": 2182,
-      "linesDeleted": 855,
-      "totalLines": 3037,
-      "commits": 1
-    },
-    "2025-08-07": {
-      "date": "2025-08-07",
-      "linesAdded": 1331,
-      "linesDeleted": 764,
-      "totalLines": 2095,
-      "commits": 1
-    },
-    "2025-08-01": {
-      "date": "2025-08-01",
-      "linesAdded": 5864,
-      "linesDeleted": 922,
-      "totalLines": 6786,
-      "commits": 3
-    },
-    "2025-07-31": {
-      "date": "2025-07-31",
-      "linesAdded": 6770,
-      "linesDeleted": 1398,
-      "totalLines": 8168,
-      "commits": 3
-    },
-    "2025-07-29": {
-      "date": "2025-07-29",
-      "linesAdded": 0,
-      "linesDeleted": 0,
-      "totalLines": 0,
-      "commits": 2
-    },
-    "2025-07-27": {
-      "date": "2025-07-27",
-      "linesAdded": 0,
-      "linesDeleted": 0,
-      "totalLines": 0,
-      "commits": 2
-    },
-    "2025-07-25": {
-      "date": "2025-07-25",
-      "linesAdded": 0,
-      "linesDeleted": 0,
-      "totalLines": 0,
-      "commits": 6
     }
   }
 }
