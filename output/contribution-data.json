@@ -1,25 +1,39 @@
 {
   "username": "EYoung21",
-  "generatedAt": "2026-07-14T08:14:14.941Z",
+  "generatedAt": "2026-07-14T13:44:08.746Z",
   "dateRange": {
     "start": "2025-07-14",
     "end": "2026-07-14"
   },
   "totals": {
-    "linesAdded": 1398958,
-    "linesDeleted": 369349,
-    "totalLines": 1768307,
-    "totalCommits": 5029,
+    "linesAdded": 1398952,
+    "linesDeleted": 369334,
+    "totalLines": 1768286,
+    "totalCommits": 5027,
     "filteredCommits": 1432
   },
   "stats": {
-    "contributingDays": 242,
+    "contributingDays": 241,
     "longestStreak": 96,
     "currentStreak": 74,
-    "avgLinesPerDay": 7307,
+    "avgLinesPerDay": 7337,
     "avgLinesPerCommit": 352
   },
   "dailyContributions": {
+    "2025-12-31": {
+      "date": "2025-12-31",
+      "linesAdded": 883,
+      "linesDeleted": 23,
+      "totalLines": 906,
+      "commits": 6
+    },
+    "2025-12-30": {
+      "date": "2025-12-30",
+      "linesAdded": 2999,
+      "linesDeleted": 492,
+      "totalLines": 3491,
+      "commits": 27
+    },
     "2026-07-14": {
       "date": "2026-07-14",
       "linesAdded": 8463,
@@ -64,9 +78,9 @@
     },
     "2026-07-08": {
       "date": "2026-07-08",
-      "linesAdded": 11431,
-      "linesDeleted": 2231,
-      "totalLines": 13662,
+      "linesAdded": 11495,
+      "linesDeleted": 2245,
+      "totalLines": 13740,
       "commits": 110
     },
     "2026-07-07": {
@@ -1420,20 +1434,6 @@
       "totalLines": 103748,
       "commits": 5
     },
-    "2025-12-31": {
-      "date": "2025-12-31",
-      "linesAdded": 883,
-      "linesDeleted": 23,
-      "totalLines": 906,
-      "commits": 6
-    },
-    "2025-12-30": {
-      "date": "2025-12-30",
-      "linesAdded": 2999,
-      "linesDeleted": 492,
-      "totalLines": 3491,
-      "commits": 27
-    },
     "2026-04-17": {
       "date": "2026-04-17",
       "linesAdded": 840,
@@ -1692,13 +1692,6 @@
       "linesDeleted": 114,
       "totalLines": 444,
       "commits": 1
-    },
-    "2025-07-14": {
-      "date": "2025-07-14",
-      "linesAdded": 70,
-      "linesDeleted": 29,
-      "totalLines": 99,
-      "commits": 2
     },
     "2026-01-28": {
       "date": "2026-01-28",
