@@ -1,12 +1,15 @@
 name: Update True Commit Graph
 
+# Shut down: the hosted Vercel instance has been removed, so the scheduled
+# regeneration is disabled. Only manual runs remain; re-enable the triggers
+# below if you redeploy.
 on:
-  schedule:
-    # Run every 6 hours
-    - cron: '0 */6 * * *'
+  # schedule:
+  #   # Run every 6 hours
+  #   - cron: '0 */6 * * *'
   workflow_dispatch: # Allow manual trigger
-  push:
-    branches: [main]
+  # push:
+  #   branches: [main]
 
 jobs:
   update:
